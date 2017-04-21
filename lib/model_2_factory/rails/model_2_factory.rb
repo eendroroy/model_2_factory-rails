@@ -10,16 +10,20 @@ module Model2Factory
     def self.create_factory(name)
       lines = []
       Object.const_get(name).columns.each do |col|
-        next if %w(updated_at created_at id).include? col.name
+        next if %w[updated_at created_at id].include? col.name
         lines << "    #{col.name} #{DEFAULTS[col.type.to_sym]}\n"
       end
-      write_to_file lines
+      write_to_file(name, lines)
     rescue NameError
       warn_not_found name
     end
 
-    def self.write_to_file(lines)
-      factory = File.open("spec/factories/#{name.underscore.pluralize}_factory.rb", File::RDWR|File::CREAT|File::TRUNC, 0644)
+    def self.write_to_file(name, lines)
+      factory = File.open(
+        "spec/factories/#{name.underscore.pluralize}_factory.rb",
+        File::RDWR | File::CREAT | File::TRUNC,
+        0o644
+      )
       factory.write "FactoryGirl.define do\n  factory :#{name.underscore} do\n"
       lines.each do |line|
         factory.write line
