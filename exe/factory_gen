@@ -4,4 +4,4 @@ require 'model_2_factory/rails/model_2_factory'
 
 require './config/environment.rb'
 
-Model2Factory::Rails.rails_test
+Model2Factory::Rails.invoke
