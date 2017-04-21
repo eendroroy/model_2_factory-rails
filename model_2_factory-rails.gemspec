@@ -28,9 +28,9 @@ Gem::Specification.new do |spec|
 
   version_string = ['>= 3.0']
 
-  spec.add_runtime_dependency %q<activesupport>, version_string
-  spec.add_runtime_dependency %q<actionpack>,    version_string
-  spec.add_runtime_dependency %q<railties>,      version_string
+  spec.add_runtime_dependency :activesupport, version_string
+  spec.add_runtime_dependency :actionpack,    version_string
+  spec.add_runtime_dependency :railties,      version_string
 
   spec.add_development_dependency 'bundler', '~> 1.13'
   spec.add_development_dependency 'rake', '~> 10.0'
