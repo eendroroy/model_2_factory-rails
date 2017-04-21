@@ -8,8 +8,8 @@ module Model2Factory
       float: 123.456,
       string: "'MyString'",
       text: "'MyText'",
-      datetime: "'Time.now.to_s'",
-      timestamp: "'Time.now.getutc.to_i.to_s'",
+      datetime: "'#{Time.now.to_s}'",
+      timestamp: "'#{Time.now.getutc.to_i.to_s}'",
       boolean: true
     }.freeze
   end
