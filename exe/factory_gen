@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-
+require 'active_support'
 require 'model_2_factory/rails/model_2_factory'
 
-puts Model2Factory::Rails.rails_test
+require './config/environment.rb'
+
+Model2Factory::Rails.rails_test
