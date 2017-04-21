@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'model_2_factory/model_2_factory'
+require 'model_2_factory/rails/model_2_factory'
 
-puts Model2Factory.rails_test
+puts Model2Factory::Rails.rails_test
