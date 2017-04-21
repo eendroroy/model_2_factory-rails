@@ -1,4 +1,4 @@
-# Model2Factory::Rails
+# model_2_factory-rails
 
 [![Gem Version](https://badge.fury.io/rb/model_2_factory-rails.svg)](https://badge.fury.io/rb/model_2_factory-rails)
 [![Build Status](https://travis-ci.org/eendroroy/model_2_factory-rails.svg?branch=master)](https://travis-ci.org/eendroroy/model_2_factory-rails) 
