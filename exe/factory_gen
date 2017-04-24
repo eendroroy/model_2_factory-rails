@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
-require 'active_support'
-require 'model_2_factory/rails/model_2_factory'
 
 require './config/environment.rb'
 
-Model2Factory::Rails.invoke
+require 'active_support'
+require 'model_2_factory-rails'
+
+Model2Factory.invoke

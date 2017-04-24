@@ -2,11 +2,11 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'model_2_factory/rails/version'
+require 'model_2_factory/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'model_2_factory-rails'
-  spec.version       = Model2Factory::Rails::Version::STRING
+  spec.version       = Model2Factory::VERSION
   spec.authors       = ['indrajit']
   spec.email         = ['eendroroy@gmail.com']
 
