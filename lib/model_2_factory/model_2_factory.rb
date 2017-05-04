@@ -29,12 +29,17 @@ module Model2Factory
     exit(1)
   end
 
-  def self.write_to_file(name, lines)
-    factory = File.open(
+  def self.create_factory_file(name)
+    File.open(
       "#{factory_dir}/#{name.underscore.pluralize}_#{factory_suffix}.rb",
       File::RDWR | File::CREAT | File::TRUNC,
       0o644
     )
+  end
+
+  def self.write_to_file(name, lines)
+    create_factory_dir(factory_dir)
+    factory = create_factory_file(name)
     factory.write "FactoryGirl.define do\n  factory :#{name.underscore} do\n"
     lines.each do |line|
       factory.write line
@@ -72,7 +77,12 @@ module Model2Factory
     end
   end
 
+  def self.create_factory_dir(dirname)
+    FileUtils.mkdir_p(dirname) unless File.directory?(dirname)
+  end
+
   class << self
+    private :create_factory_dir
     private :create_factory
     private :write_to_file
     private :warn_not_found
