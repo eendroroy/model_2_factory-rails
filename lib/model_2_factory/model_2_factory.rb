@@ -13,6 +13,7 @@ module Model2Factory
   }.freeze
 
   def self.invoke
+    warnings_for_dependencies
     create_factory(ARGV[0].to_s)
   end
 
@@ -81,6 +82,14 @@ module Model2Factory
     FileUtils.mkdir_p(dirname) unless File.directory?(dirname)
   end
 
+  def self.red_colorize(msg)
+    "\e[31m#{msg}\e[0m"
+  end
+
+  def self.warnings_for_dependencies
+    puts red_colorize Constants::FACTORY_GIRL_RAILS_MISSING unless Gem.loaded_specs.key? 'factory_girl_rails'
+  end
+
   class << self
     private :create_factory_dir
     private :create_factory
@@ -88,5 +97,6 @@ module Model2Factory
     private :warn_not_found
     private :factory_dir
     private :factory_suffix
+    private :warnings_for_dependencies
   end
 end
