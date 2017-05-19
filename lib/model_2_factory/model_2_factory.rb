@@ -87,9 +87,7 @@ module Model2Factory
   end
 
   def self.warnings_for_dependencies
-    unless Gem.loaded_specs.has_key? 'factory_girl_rails'
-      puts red_colorize 'Project does not use dependency factory_girl_rails.'
-    end
+    puts red_colorize Constants::FACTORY_GIRL_RAILS_MISSING unless Gem.loaded_specs.key? 'factory_girl_rails'
   end
 
   class << self
