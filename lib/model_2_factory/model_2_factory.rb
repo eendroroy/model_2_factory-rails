@@ -13,6 +13,7 @@ module Model2Factory
   }.freeze
 
   def self.invoke
+    warnings_for_dependencies
     create_factory(ARGV[0].to_s)
   end
 
@@ -29,12 +30,17 @@ module Model2Factory
     exit(1)
   end
 
-  def self.write_to_file(name, lines)
-    factory = File.open(
+  def self.create_factory_file(name)
+    File.open(
       "#{factory_dir}/#{name.underscore.pluralize}_#{factory_suffix}.rb",
       File::RDWR | File::CREAT | File::TRUNC,
       0o644
     )
+  end
+
+  def self.write_to_file(name, lines)
+    create_factory_dir(factory_dir)
+    factory = create_factory_file(name)
     factory.write "FactoryGirl.define do\n  factory :#{name.underscore} do\n"
     lines.each do |line|
       factory.write line
@@ -72,11 +78,25 @@ module Model2Factory
     end
   end
 
+  def self.create_factory_dir(dirname)
+    FileUtils.mkdir_p(dirname) unless File.directory?(dirname)
+  end
+
+  def self.red_colorize(msg)
+    "\e[31m#{msg}\e[0m"
+  end
+
+  def self.warnings_for_dependencies
+    puts red_colorize Constants::FACTORY_GIRL_RAILS_MISSING unless Gem.loaded_specs.key? 'factory_girl_rails'
+  end
+
   class << self
+    private :create_factory_dir
     private :create_factory
     private :write_to_file
     private :warn_not_found
     private :factory_dir
     private :factory_suffix
+    private :warnings_for_dependencies
   end
 end
