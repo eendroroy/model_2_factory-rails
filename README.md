@@ -1,8 +1,11 @@
 # model_2_factory-rails
 
-[![Gem Version](https://badge.fury.io/rb/model_2_factory-rails.svg)](https://badge.fury.io/rb/model_2_factory-rails)
+[![Gem Version](https://badge.fury.io/rb/model_2_factory-rails.svg)](https://rubygems.org/gems/model_2_factory-rails)
+[![Downloads](https://img.shields.io/gem/dt/model_2_factory-rails.svg)](https://rubygems.org/gems/model_2_factory-rails)
 [![Build Status](https://travis-ci.org/eendroroy/model_2_factory-rails.svg?branch=master)](https://travis-ci.org/eendroroy/model_2_factory-rails) 
 [![Code Climate](https://codeclimate.com/github/eendroroy/model_2_factory-rails/badges/gpa.svg)](https://codeclimate.com/github/eendroroy/model_2_factory-rails)
+[![Contributors](https://img.shields.io/github/contributors/eendroroy/model_2_factory-rails.svg)](CONTRIBUTORS.md)
+
 
 ## Installation
 
