@@ -7,38 +7,62 @@
 [![Contributors](https://img.shields.io/github/contributors/eendroroy/model_2_factory-rails.svg)](CONTRIBUTORS.md)
 
 
-## Installation
+Factory model class generator for rails model class.
+
+## Description
+
+Generate factory model class from rails active record class for rails-rspec test code.
+
+### Prerequisites
+
+Require following gem to be included in your gem file:
+ 
+ - factory_girl-rails
+```
+factory_girl-rails
+```
+
+### Installing
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'model_2_factory-rails'
 ```
+gem 'model_2_factory-rails'
 
+```
 And then execute:
 
-    $ bundle
+```
+$ bundle
 
-Or install it yourself as:
+```
+Or install it globally in your system:
 
-    $ gem install model_2_factory-rails
+```
+$ gem install model_2_factory-rails
+
+```
 
 ## Usage
 
-    $ bundle exec factory_gen ModelName
+To generate factory class for your existing model class
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```
+$ bundle exec factory_gen your_model_name
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/eendroroy/model_2_factory-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [model_2_factory-rails repository](https://github.com/eendroroy/model_2_factory-rails). 
+This project is intended to be a safe, welcoming space for collaboration,
+and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
+## Authors
+
+* **Indrajit Roy** - *Initial work* - [eendroroy](https://github.com/eendroroy)
+
+See also the list of [contributors](CONTRIBUTORS.md) who participated in this project.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
