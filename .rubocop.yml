@@ -3,6 +3,7 @@ AllCops:
     - 'bin/**/*'
     - 'spec/**/*'
     - 'vendor/**/*'
+    - 'model_2_factory-rails.gemspec'
 
 Metrics/LineLength:
   Max: 120
