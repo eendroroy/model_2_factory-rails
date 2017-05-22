@@ -15,6 +15,13 @@ Generate factory model class from rails active record class for rails-rspec test
 
 ### Prerequisites
 
+Require following gem to be included in your gem file:
+ 
+ - factory_girl_rails
+```
+factory_girl_rails
+```
+
 ### Installing
 
 Add this line to your application's Gemfile:
@@ -38,6 +45,11 @@ $ gem install model_2_factory-rails
 
 ## Usage
 
+To generate factory class for your existing model class
+
+```
+$ bundle exec factory_gen your_model_name
+```
 
 ## Contributing
 
