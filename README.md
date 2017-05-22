@@ -4,7 +4,7 @@
 [![Downloads](https://img.shields.io/gem/dt/model_2_factory-rails.svg)](https://rubygems.org/gems/model_2_factory-rails)
 [![Build Status](https://travis-ci.org/eendroroy/model_2_factory-rails.svg?branch=master)](https://travis-ci.org/eendroroy/model_2_factory-rails) 
 [![Code Climate](https://codeclimate.com/github/eendroroy/model_2_factory-rails/badges/gpa.svg)](https://codeclimate.com/github/eendroroy/model_2_factory-rails)
-[![Contributors](https://img.shields.io/github/contributors/eendroroy/model_2_factory-rails.svg)](CONTRIBUTORS.md)
+[![Contributors](https://img.shields.io/github/contributors/eendroroy/model_2_factory-rails.svg)](https://github.com/eendroroy/model_2_factory-rails/graphs/contributors)
 
 
 Factory model class generator for rails model class.
