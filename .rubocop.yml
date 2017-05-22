@@ -27,3 +27,6 @@ Style/NumericLiterals:
 
 Style/Next:
   Enabled: false
+
+Style/FileName:
+  Enabled: false
