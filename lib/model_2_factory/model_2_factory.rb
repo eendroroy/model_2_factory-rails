@@ -82,12 +82,8 @@ module Model2Factory
     FileUtils.mkdir_p(dirname) unless File.directory?(dirname)
   end
 
-  def self.red_colorize(msg)
-    "\e[31m#{msg}\e[0m"
-  end
-
   def self.warnings_for_dependencies
-    puts red_colorize Constants::FACTORY_GIRL_RAILS_MISSING unless Gem.loaded_specs.key? 'factory_girl_rails'
+    puts Constants::FACTORY_GIRL_RAILS_MISSING.red unless Gem.loaded_specs.key? 'factory_girl_rails'
   end
 
   class << self
