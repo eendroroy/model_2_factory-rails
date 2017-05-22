@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 
-require './config/environment.rb'
+if File.exist? File.join(Dir.pwd, 'bin', 'rails')
+  require './config/environment.rb'
+  require 'model_2_factory-rails'
 
-require 'active_support'
-require 'model_2_factory-rails'
-
-Model2Factory.invoke
+  Model2Factory.invoke
+else
+  puts "\n'#{`pwd`.strip}' is not a rails application root.\n\n"
+end
